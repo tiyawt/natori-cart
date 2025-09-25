@@ -8,9 +8,9 @@ export default function StarRating({ rating = 0, total = 5, size = 20 }) {
       style={{ fontSize: size, lineHeight: 1 }}
     >
       <div className="relative inline-block leading-none">
-        <div className="dark:text-gray-700 text-gray-300 select-none">{"★".repeat(total)}</div>
+        <div className="dark:text-gray-700 text-gray-300 text-sm md:text-xl select-none">{"★".repeat(total)}</div>
         <div
-          className="absolute inset-0 overflow-hidden text-black dark:text-white select-none pointer-events-none"
+          className="absolute inset-0 overflow-hidden text-sm text-black md:text-xl dark:text-white select-none pointer-events-none"
           style={{ width: `${pct}%` }}
         >
           {"★".repeat(total)}

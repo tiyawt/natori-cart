@@ -42,15 +42,13 @@ export default function CartItem({ item }) {
           <Counter id={id} qty={qty} />
         </div>
 
-        <div className="col-span-1 text-right font-semibold">
-          {currency(lineTotal)}
-        </div>
+        <div className="col-span-1 font-semibold">{currency(lineTotal)}</div>
       </div>
 
       {/* MOBILE */}
-      <div className="grid md:hidden grid-cols-12 items-center border-b py-4 gap-4">
-        <div className="col-span-6 flex gap-4">
-          <div className="relative h-28 w-28 flex-none grid place-items-center rounded border bg-white">
+      <div className="grid md:hidden grid-cols-6 items-center border-b py-4 gap-2">
+        <div className="col-span-4 flex gap-2">
+          <div className="relative h-16 w-16 flex-none grid place-items-center rounded border bg-white">
             <img
               src={image}
               alt={`${title} image`}
@@ -58,29 +56,25 @@ export default function CartItem({ item }) {
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <h2 className="font-semibold text-base">{title}</h2>
-            <div className="flex flex-row gap-14">
+            <div className="col-span-2 text-sm capitalize">{category}</div>
+            <div className="flex flex-row gap-24">
               <div>
                 {typeof StarRating !== "undefined" && (
                   <StarRating rating={safeRating} />
                 )}
-                <div className="col-span-1 text-base mt-4">
-                  {currency(price)}
-                </div>
+                <div className="col-span-2 text-sm">{currency(price)}</div>
               </div>
 
-              <div className="col-span-2 flex justify-center items-center">
+              <div className="col-span-2 flex justify-center items-center w-8 h-8">
                 <Counter id={id} qty={qty} />
               </div>
             </div>
+            <div className="col-span-2 mt-4 font-semibold">
+              {currency(lineTotal)}
+            </div>
           </div>
-        </div>
-
-        <div className="col-span-2 text-sm capitalize">{category}</div>
-
-        <div className="col-span-1 text-right font-semibold">
-          {currency(lineTotal)}
         </div>
       </div>
     </>

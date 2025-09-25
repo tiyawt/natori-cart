@@ -16,13 +16,13 @@ export default function ButtonCounter({
   return (
     <div className="inline-flex items-center">
       <Button variant="outline" size="icon" onClick={onDec} disabled={!canDec}>
-        <LuSquareMinus className="h-4 w-4" />
+        <LuSquareMinus className="h-2 w-2" />
       </Button>
 
-      <span className="mx-2 w-10 text-center select-none">{value}</span>
+      <span className="mx-2 w-5 text-center select-none">{value}</span>
 
       <Button variant="outline" size="icon" onClick={onInc} disabled={!canInc}>
-        <LuSquarePlus className="h-4 w-4" />
+        <LuSquarePlus className="h-2 w-2" />
       </Button>
     </div>
   );
