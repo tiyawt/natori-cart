@@ -45,7 +45,7 @@ export default function Page() {
     <>
       {loading ? (
         <div className="flex items-center justify-center min-h-[50vh]">
-          <ScaleLoader />
+          <ScaleLoader color="#ffffff" />
         </div>
       ) : (
         <div className="md:px-20">
