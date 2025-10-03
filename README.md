@@ -22,9 +22,8 @@ A minimal, fast, and clean shopping cart prototype built with Next.js + Zustand 
 ## Tech Stack
 
 - **Framework:** Next.js
-- **Language:** JavaScript / TypeScript-ready
-- **Styling:** CSS (Tailwind or vanilla, depending on repo config)
-- **Bundler/Dev:** Vite-like DX via Next dev server
+- **Language:** JavaScript
+- **Styling:** CSS (Tailwind, Shadcn UI)
 - **Deploy:** Vercel
 
 ---
